@@ -2,13 +2,13 @@
 <odoo>
     <record id="customers_model_action" model="ir.actions.act_window">
         <field name="name">Customers</field>
-        <field name="res_model">customers</field>
+        <field name="res_model">res.partner</field>
         <field name="view_mode">list,form</field>
     </record>
 
     <record id="customers_view_tree" model="ir.ui.view">
         <field name="name">customers.list</field>
-        <field name="model">customers</field>
+        <field name="model">res.partner</field>
         <field name="arch" type="xml">
             <list string="Customers">
                 <field name="name"/>

@@ -8,8 +8,10 @@ class TestModel(models.Model):
     name = fields.Char('Title', required=True, translate=True)
     property_type_id = fields.Many2one('estate.property.type', string='Property Type')
     user_id = fields.Many2one('res.users', string='Salesman', default=lambda self: self.env.user)
-    customer_id = fields.Many2one('customers', string='Buyer', copy=False)
+    customer_id = fields.Many2one('res.partner', string='Buyer', copy=False)
     tags_ids = fields.Many2many('estate.property.tags', string='Tags')
+    property_id = fields.Many2one('estate.property', string='Property')
+    offer_ids = fields.One2many('estate.property.offer', 'property_id', string='Offers')
     active = fields.Boolean('Active', default=True)
     state = fields.Selection(
         string='Status',

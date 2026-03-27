@@ -2,5 +2,6 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 pr_test.access_estate_property,access_estate_property,pr_test.model_estate_property,base.group_user,1,1,1,1
 pr_test.access_estate_property_type,access_estate_property_type,pr_test.model_estate_property_type,base.group_user,1,1,1,1
 pr_test.res_users,res_users,pr_test.model_res_users,base.group_user,1,1,1,1
-pr_test.customers,customers,pr_test.model_customers,base.group_user,1,1,1,1
+pr_test.res_partner,res_partner,pr_test.model_res_partner,base.group_user,1,1,1,1
 pr_test.estate_property_tags,estate_property_tags,pr_test.model_estate_property_tags,base.group_user,1,1,1,1
+pr_test.estate_property_offer,estate_property_offer,pr_test.model_estate_property_offer,base.group_user,1,1,1,1
