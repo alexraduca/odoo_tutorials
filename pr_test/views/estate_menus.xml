@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="test_menu_root" name="Test">
-        <menuitem id="test_first_level_menu" name="First Level">
+        <menuitem id="test_another_first_level_menu" name="Settings">
             <menuitem id="test_model_menu_action" action="test_model_action"/>
-        </menuitem>
-        <menuitem id="test_another_first_level_menu" name="Another first Level">
-            <menuitem id="test_model_menu_action_2" action="test_model_action"/>
+            <menuitem id="test_model_menu_action_2" action="test_model_type_action"/>
+            <menuitem id="test_model_menu_action_3" action="users_model_action"/>
+            <menuitem id="test_model_menu_action_4" action="customers_model_action"/>
         </menuitem>
     </menuitem>
 </odoo>         

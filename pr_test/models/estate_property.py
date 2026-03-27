@@ -6,6 +6,9 @@ class TestModel(models.Model):
     _description = 'Estate Property'
 
     name = fields.Char('Title', required=True, translate=True)
+    property_type_id = fields.Many2one('estate.property.type', string='Property Type')
+    user_id = fields.Many2one('res.users', string='Salesman', default=lambda self: self.env.user)
+    customer_id = fields.Many2one('customers', string='Buyer', copy=False)
     active = fields.Boolean('Active', default=True)
     state = fields.Selection(
         string='Status',

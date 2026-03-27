@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="test_model_action" model="ir.actions.act_window">
-        <field name="name">Test action</field>
+        <field name="name">Estate</field>
         <field name="res_model">estate.property</field>
         <field name="view_mode">list,form</field>
     </record>
@@ -35,6 +35,7 @@
                     </div>
                     <group>
                         <group>
+                            <field name="property_type_id"/>
                             <field name="postcode"/>
                             <field name="date_availability"/>
                         </group>
@@ -58,6 +59,14 @@
                                 </group>
                             </group>
                         </page>
+                        <page string="Other Info">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                    <field name="customer_id"/>
+                                </group>
+                            </group>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
@@ -75,6 +84,11 @@
                 <field name="bedrooms"/>
                 <field name="living_area"/>
                 <field name="facades"/>
+                <separator/>
+                <filter name="state" string="State" domain="['|', ('state', '=', 'new'), ('state', '=', 'offer_received')]"/>
+                <group>
+                    <filter string="Postcode" name="postcode" context="{'group_by':'postcode', 'residual_visible':True}"/>
+                </group>
             </search>
         </field>
     </record>
